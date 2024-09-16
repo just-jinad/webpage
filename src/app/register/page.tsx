@@ -8,7 +8,7 @@ const page = () => {
         {/* Logo Section */}
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center space-x-2">
-            <Image src="/image/logo.png" alt="Tesla Logo" width={50} height={50} />
+            <Image src="/image/logo.png" alt="Tesla Logo" width={100} height={100} />
             <h1 className="text-2xl font-bold">Tesla Investment And Stocks</h1>
           </div>
           <div>
@@ -31,7 +31,7 @@ const page = () => {
                 type="text"
                 id="fullName"
                 placeholder="Enter Full Name"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="mt-1 block w-full border border-gray-300  focus:ring-blue-500 focus:border-blue-500 sm:text-sm p-3"
               />
             </div>
 
@@ -43,7 +43,7 @@ const page = () => {
                 type="text"
                 id="username"
                 placeholder="Enter Username"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="mt-1 block w-full border border-gray-300  focus:ring-blue-500 focus:border-blue-500 sm:text-sm  p-3"
               />
             </div>
           </div>
@@ -56,7 +56,7 @@ const page = () => {
               type="email"
               id="email"
               placeholder="Enter Email"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              className="mt-1 block w-full border p-3 border-gray-300  focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
           </div>
 
@@ -69,7 +69,7 @@ const page = () => {
                 type="password"
                 id="password"
                 placeholder="Password"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="mt-1 block w-full border  p-3 border-gray-300  focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
 
@@ -81,7 +81,7 @@ const page = () => {
                 type="password"
                 id="confirmPassword"
                 placeholder="Confirm Password"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="mt-1 block w-full  p-3 border  border-gray-300 sm:text-sm"
               />
             </div>
           </div>
