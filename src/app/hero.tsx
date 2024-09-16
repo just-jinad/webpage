@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 function Hero() {
@@ -76,9 +77,11 @@ function Hero() {
           </div>
 
           {/* Button */}
+          <Link href="/register">
           <button className="mt-8 py-3 px-6 bg-red-600 hover:bg-red-700 transition-colors duration-300 text-white rounded-full">
             {texts[currentIndex].button}
           </button>
+        </Link>
         </div>
 
         {/* Constant Four Cards Section */}
