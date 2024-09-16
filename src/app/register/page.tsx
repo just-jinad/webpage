@@ -8,7 +8,7 @@ const page = () => {
         {/* Logo Section */}
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center space-x-2">
-            <Image src="/image/logo.png" alt="Tesla Logo" width={100} height={100} />
+            <Image src="/image/logo 2.png" alt="Tesla Logo" width={100} height={100} />
             <h1 className="text-2xl font-bold">Tesla Investment And Stocks</h1>
           </div>
           <div>
@@ -23,7 +23,7 @@ const page = () => {
         {/* Form Section */}
         <form className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+            <div className="mt-5">
               <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
                 Full name
               </label>
@@ -35,7 +35,7 @@ const page = () => {
               />
             </div>
 
-            <div>
+            <div className="mt-5">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700">
                 Username
               </label>
@@ -47,8 +47,9 @@ const page = () => {
               />
             </div>
           </div>
+          <br />
 
-          <div>
+          <div className="mt-5">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
             </label>
@@ -61,7 +62,7 @@ const page = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+            <div className="mt-5">
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
               </label>
@@ -73,7 +74,7 @@ const page = () => {
               />
             </div>
 
-            <div>
+            <div className="mt-5">
               <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                 Confirm Password
               </label>
