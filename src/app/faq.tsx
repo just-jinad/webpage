@@ -3,26 +3,26 @@ import React from "react";
 
 const FAQS = [
   {
-    title: "1. How do I register for the AI Conference 2023?",
-    desc: "You can register for the AI Conference 2023 by visiting our registration page. Follow the simple steps to complete your registration and secure your spot at the conference.",
+    title: "We Are Well-regulated and Safe To Trade With",
+    desc: "Your Stock broker will hold your funds. Thus, it is important you verify it is safe. Stock Birds easily circumvents this concern as we are registered with and duly regulated by the US's Securities and Exchange Commission (SEC). Consequently, you can be sure.",
     img: "/image/new1.jpg",
   },
 
   {
-    title: "2. What are the registration fees, and what is included?",
-    desc: "It really matters and then like it really doesn't matter. What matters is the people who are sparked by it...",
+    title: "We Genuinely Want Our Clients to Succeed",
+    desc: "Genuinely, we want to see you succeed. Once you open an account with us, we will hold your capital in trust. We will work with you until you succeed. Our platforms are responsive, our execution speed is fast, the markets we cover are broad, and we give you",
     img: "/image/new2.jpg",
   },
   {
-    title: "4. Will there be on-site registration available?",
-    desc: "I always felt like I could do anything. That's the main thing people are controlled by! Thoughts- their perception of themselves...",
+    title: "We Are A Broker of Established Repute",
+    desc: "Our reputation has been confirmed. We have been around for long and about us our clients from all over the world have nothing but positive things to say. We offer only a market-leading, industry-standard brokerage service, and we know you would not want to deny yourself of it. Stock broker",
     img: "/image/new3.jpg",
   },
 ];
 
 export function Faq() {
   return (
-    <section className="py-8 px-8 lg:py-20">
+    <section className="py-8 px-8 lg:py-20" style={{fontFamily:'Rubik'}}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-blue-gray-800 mb-4">
@@ -37,7 +37,7 @@ export function Faq() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {FAQS.map(({ title, desc, img }, key) => (
             <div
-              className="group relative h-auto overflow-hidden bg-[#f5f5f5] text-black shadow-[#00000059_0px_5px_15px] transition-all duration-500 ease-in-out rounded-lg"
+              className="group relative h-auto overflow-hidden bg-[#eef2f6] text-black shadow-[#00000059_0px_5px_15px] transition-all duration-500 ease-in-out"
               key={key}
             >
               {/* Image with hover effect */}
@@ -50,7 +50,7 @@ export function Faq() {
                 {/* FAQ Title */}
                 <h2 className="text-xl font-bold mb-2">{title}</h2>
                 {/* FAQ Description */}
-                <p className="text-gray-500 mb-4">{desc}</p>
+                <p className="text-gray-600 mb-4">{desc}</p>
                 {/* Read more link with hover effect */}
                 <a
                   href="#"
