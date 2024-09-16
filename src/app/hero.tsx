@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from 'react';
-import Image from 'next/image'; // Image component for optimization
 
 function Hero() {
   const images = [
@@ -48,16 +47,14 @@ function Hero() {
     <div className="relative min-h-screen w-full">
       {/* First image layer */}
       <div
-        className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${currentIndex === nextIndex ? 'opacity-100' : 'opacity-0'}`}
+        className="absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 opacity-100"
         style={{ backgroundImage: `url(${images[currentIndex]})` }}
-        aria-label={`Background image ${currentIndex + 1}`}
       ></div>
 
       {/* Second image layer for smooth transition */}
       <div
-        className={`absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 ${nextIndex === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+        className="absolute inset-0 bg-cover bg-no-repeat transition-opacity duration-1000 opacity-0"
         style={{ backgroundImage: `url(${images[nextIndex]})` }}
-        aria-label={`Background image ${nextIndex + 1}`}
       ></div>
 
       {/* Overlay */}
@@ -69,17 +66,17 @@ function Hero() {
         <div className="w-full flex flex-col items-center space-y-6">
           {/* Centered Texts */}
           <div className="flex flex-col items-center justify-center transition-all duration-1000 transform mt-32">
-            <h3 className="text-xl md:text-2xl mb-4">{texts[currentIndex].subheading}</h3>
-            <p className="text-sm md:text-lg max-w-2xl">{texts[currentIndex].description}</p>
+            <h3 className="text-2xl mb-4">{texts[currentIndex].subheading}</h3>
+            <p className="text-lg max-w-2xl">{texts[currentIndex].description}</p>
           </div>
 
           {/* Right Aligned Heading */}
-          <div className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-1000">
-            <h2 className="text-2xl md:text-4xl font-bold mb-2">{texts[currentIndex].heading}</h2>
+          <div className="absolute top-1/2  transform -translate-y-1/2 transition-all duration-1000">
+            <h2 className="text-4xl font-bold mb-2">{texts[currentIndex].heading}</h2>
           </div>
 
           {/* Button */}
-          <button className="mt-8 py-3 px-6 bg-red-600 hover:bg-red-700 transition-transform duration-300 transform hover:scale-105 text-white rounded-full shadow-lg">
+          <button className="mt-8 py-3 px-6 bg-red-600 hover:bg-red-700 transition-colors duration-300 text-white rounded-full">
             {texts[currentIndex].button}
           </button>
         </div>
@@ -87,7 +84,7 @@ function Hero() {
         {/* Constant Four Cards Section */}
         <div className="mt-40 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mb-5">
           {/* Card 1 */}
-          <div className="group flex flex-col items-center p-6 bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
+          <div className="group flex flex-col items-center p-6  bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
             <svg className="h-12 w-12 text-white group-hover:text-red-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
             </svg>
@@ -96,7 +93,7 @@ function Hero() {
           </div>
 
           {/* Card 2 */}
-          <div className="group flex flex-col items-center p-6 bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
+          <div className="group flex flex-col items-center p-6  bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
             <svg className="h-12 w-12 text-white group-hover:text-red-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
             </svg>
@@ -105,7 +102,7 @@ function Hero() {
           </div>
 
           {/* Card 3 */}
-          <div className="group flex flex-col items-center p-6 bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
+          <div className="group flex flex-col items-center p-6  bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
             <svg className="h-12 w-12 text-white group-hover:text-red-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
             </svg>
@@ -114,7 +111,7 @@ function Hero() {
           </div>
 
           {/* Card 4 */}
-          <div className="group flex flex-col items-center p-6 bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
+          <div className="group flex flex-col items-center p-6  bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
             <svg className="h-12 w-12 text-white group-hover:text-red-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
             </svg>
@@ -122,6 +119,8 @@ function Hero() {
             <p className="text-sm">Some descriptive text about this feature.</p>
           </div>
         </div>
+
+
       </div>
     </div>
   );

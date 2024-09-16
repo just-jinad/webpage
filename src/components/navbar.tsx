@@ -6,6 +6,8 @@ import {
   faMapMarkerAlt,
   faPhone,
   faCaretDown,
+  faBars,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
@@ -22,14 +24,12 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check scroll direction (up or down)
       if (window.scrollY > lastScrollY) {
         setNavbarVisible(false); // Hide navbar when scrolling down
       } else {
         setNavbarVisible(true); // Show navbar when scrolling up
       }
 
-      // Check if user is at the top of the page
       if (window.scrollY === 0) {
         setAtTop(true);
       } else {
@@ -81,17 +81,14 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img src="/image/logo.png" alt="Tesla Logo" className="h-10" />
-            <h1 className="text-lg font-bold">
-              Tesla Investment And Stocks
-            </h1>
+            <h1 className="text-lg font-bold">Tesla Investment And Stocks</h1>
           </div>
 
           {/* Navbar Links */}
           <ul className="hidden md:flex space-x-8 font-semibold">
             <li className="cursor-pointer hover:text-red-600">Home</li>
             <li className="cursor-pointer hover:text-red-600 flex items-center">
-              Our Company{" "}
-              <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+              Our Company <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
             </li>
             <li className="cursor-pointer text-red-600">Plans</li>
             <li className="cursor-pointer hover:text-red-600">Login</li>
@@ -118,26 +115,17 @@ const Navbar = () => {
             className="block md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <FontAwesomeIcon icon={faCaretDown} className="h-6 w-6" />
+            <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} className="h-6 w-6" />
           </button>
         </div>
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <ul className="md:hidden flex flex-col space-y-4 bg-white p-4">
+          <ul className="md:hidden flex flex-col space-y-4 bg-white text-black p-4">
             <li className="cursor-pointer hover:text-red-600">Home</li>
-            <li className="cursor-pointer hover:text-red-600 flex items-center">
-              Our Company <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
-            </li>
-            <li className="cursor-pointer text-red-600">Plans</li>
-            <li className="cursor-pointer hover:text-red-600">Login</li>
+            <li className="cursor-pointer hover:text-red-600">Our Company</li>
+            <li className="cursor-pointer hover:text-red-600">Plans</li>
             <li className="cursor-pointer hover:text-red-600">Register</li>
-            <li className="cursor-pointer hover:text-red-600 flex items-center">
-              Demo <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
-            </li>
-            <li className="cursor-pointer hover:text-red-600 flex items-center">
-              Legal <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
-            </li>
           </ul>
         )}
       </nav>
