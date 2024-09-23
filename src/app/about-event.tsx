@@ -65,14 +65,14 @@ export function AboutEvent() {
         </div>
 
         {/* Right Section - Icon Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:w-1/2 mt-8 lg:mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:w-1/2 mt-8 lg:mt-0 ">
           {EVENT_INFO.map((item, idx) => (
             <div
               key={idx}
               className="border border-gray-300  p-4 bg-white shadow-lg flex flex-col items-center text-center"
             >
         
-              <img className="text-5xl text-blue-500 mb-4" src={item.icon} alt="" />
+              <img className="text-5xl text-blue-500 mb-4 transform transition-transform duration-300 hover:translate-y-2" src={item.icon} alt="" />
               <div>
                 <h3 className="text-lg font-bold mb-2 text-[#16243f]">{item.title}</h3>
                 {/* <p className="text-gray-600">{item.description}</p> */}
