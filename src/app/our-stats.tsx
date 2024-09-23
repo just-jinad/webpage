@@ -28,7 +28,11 @@ export function OurStats() {
               distribution financial.
             </p>
 
-            <div className="divone">
+            <div className="divone flex gap-10">
+              <div>
+              <img src="/image/setIcon3.png" alt="" />
+              </div>
+            <div>
               <p className="text-blue-500 font-bold text-lg">
                 10+ Years In Business
               </p>
@@ -37,8 +41,14 @@ export function OurStats() {
                 best.
               </p>
             </div>
+            </div>
 
-            <div className="divtwo mt-5">
+            <div className="divtwo mt-5 flex gap-10">
+            <div>
+              <img src="/image/setIcon4.png" alt="" />
+              </div>
+
+              <div>
               <p className="text-blue-500 font-bold text-lg">
                 5,000,000+ Happy Investors
               </p>
@@ -46,9 +56,15 @@ export function OurStats() {
                 Based on past feedback from investors, we can beat our chest
                 that we are one of the best in the industry
               </p>
+              </div>
             </div>
 
-            <div className="divtwo mt-5">
+            <div className="divtwo mt-5 flex gap-10">
+            <div>
+              <img src="/image/setIcon5.png" alt="" />
+              </div>
+
+              <div>
               <p className="text-blue-500 font-bold text-lg">
                 24/7 Customer Support
               </p>
@@ -56,6 +72,7 @@ export function OurStats() {
                 At Tesla Investment & Stocks we put our customers above every
                 other thing. We provide top notch support to our customers
               </p>
+              </div>
             </div>
           </div>
 

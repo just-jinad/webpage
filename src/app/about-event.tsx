@@ -132,7 +132,7 @@ export function AboutEvent() {
             </div>
 
             <div className="flex gap-10 mt-5 mb-10">
-              <img src="/image/setIcon2.png" alt="" />
+              <img className="transform transition-transform duration-300 hover:translate-y-2" src="/image/setIcon2.png" alt="" />
               <div>
                 <p className="font-bold text-xl">Flexibility:</p>
                 funding grows in line with your daily sales update.
