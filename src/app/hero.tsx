@@ -88,38 +88,30 @@ function Hero() {
         <div className="mt-40 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mb-5">
           {/* Card 1 */}
           <div className="group flex flex-col items-center p-6  bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
-            <svg className="h-12 w-12 text-white group-hover:text-red-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
-            </svg>
-            <h4 className="text-lg font-semibold mb-2">Card Title One</h4>
-            <p className="text-sm">Some descriptive text about this feature.</p>
+          <img src="/image/icon.png" alt="" />
+            <h4 className="text-lg font-semibold mb-2 mt-3">Stocks</h4>
+           
           </div>
 
           {/* Card 2 */}
           <div className="group flex flex-col items-center p-6  bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
-            <svg className="h-12 w-12 text-white group-hover:text-red-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
-            </svg>
-            <h4 className="text-lg font-semibold mb-2">Card Title Two</h4>
-            <p className="text-sm">Some descriptive text about this feature.</p>
+            <img src="/image/icon.png" alt="" />
+            <h4 className="text-lg font-semibold mb-2 mt-3">Bonds and ETFs</h4>
+            
           </div>
 
           {/* Card 3 */}
           <div className="group flex flex-col items-center p-6  bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
-            <svg className="h-12 w-12 text-white group-hover:text-red-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
-            </svg>
-            <h4 className="text-lg font-semibold mb-2">Card Title Three</h4>
-            <p className="text-sm">Some descriptive text about this feature.</p>
+          <img src="/image/icon.png" alt="" />
+            <h4 className="text-lg font-semibold mb-2 mt-3">Our Products</h4>
+           
           </div>
 
           {/* Card 4 */}
           <div className="group flex flex-col items-center p-6  bg-[rgba(29,41,60,0.8)] hover:bg-red-600 transition-colors duration-300 rounded-lg">
-            <svg className="h-12 w-12 text-white group-hover:text-red-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
-            </svg>
-            <h4 className="text-lg font-semibold mb-2">Card Title Four</h4>
-            <p className="text-sm">Some descriptive text about this feature.</p>
+          <img src="/image/iconn.png" alt="" />
+            <h4 className="text-lg font-semibold mb-2 mt-3">Real Estate Investing</h4>
+        
           </div>
         </div>
 
