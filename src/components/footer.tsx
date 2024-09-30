@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
@@ -49,7 +51,14 @@ export function Footer() {
               </button>
             </form>
             <div className="mt-4">
-              <img src="/path-to-hapton-logo.png" alt="Hapton" className="mt-4" />
+              <Image
+              src="/path-to-hapton-logo.png" alt="Hapton" className="mt-4" 
+              width={50}
+              height={50}
+              >
+
+              </Image>
+              <img />
               <p className="text-xs mt-2">Partnered By Hapton Credit Union</p>
             </div>
           </div>

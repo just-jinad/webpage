@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function FixedPlugin() {
   return (
-    <a href="https://www.material-tailwind.com" target="_blank">
+    <a href="/" target="_blank">
       <button
         color="white"
         
@@ -15,7 +15,7 @@ export function FixedPlugin() {
           height={128}
           className="w-5 h-5"
           alt="Material Tailwind"
-          src="https://www.material-tailwind.com/favicon.pn"
+          src="ht"
         />{" "}
         Chat with us, we're are online!  jivochat
       </button>
