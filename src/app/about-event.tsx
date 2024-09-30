@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import {
   LineChart,
   Line,
@@ -94,11 +95,16 @@ export function AboutEvent() {
                 key={idx}
                 className="border border-gray-300  p-4 bg-white shadow-lg flex flex-col items-center text-center"
               >
-                <img
+                <Image
                   className="text-5xl text-blue-500 mb-4 transform transition-transform duration-300 hover:translate-y-2"
                   src={item.icon}
-                  alt=""
-                />
+                alt="item"
+                width={50}
+                height={50}
+                >
+                  
+                  </Image>
+              
                 <div>
                   <h3 className="text-lg font-bold mb-2 text-[#16243f]">
                     {item.title}
@@ -124,7 +130,15 @@ export function AboutEvent() {
             </h1>
 
             <div className="flex gap-10 mt-5 mb-5">
-              <img src="/image/setIcon1.png" alt="" />
+            <Image
+                 src="/image/setIcon1.png"
+                alt="item"
+                width={50}
+                height={50}
+                >
+                  
+                  </Image>
+             
               <div>
                 <p className="font-bold text-xl">Security:</p>
                 we offer protection when your customers have financial.
@@ -132,7 +146,15 @@ export function AboutEvent() {
             </div>
 
             <div className="flex gap-10 mt-5 mb-10">
-              <img className="transform transition-transform duration-300 hover:translate-y-2" src="/image/setIcon2.png" alt="" />
+              
+              <Image
+              className="transform transition-transform duration-300 hover:translate-y-2"
+               src="/image/setIcon2.png"
+                alt="item"
+                width={50}
+                height={50}
+                >
+                  </Image>
               <div>
                 <p className="font-bold text-xl">Flexibility:</p>
                 funding grows in line with your daily sales update.

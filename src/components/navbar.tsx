@@ -15,6 +15,7 @@ import {
   faGooglePlusG,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -80,7 +81,14 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex mt-5 justify-between items-center py-6 px-4 md:px-10">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="/image/logo.png" alt="Tesla Logo" className="h-10" />
+            <Image 
+            src="/image/logo.png" alt="Tesla Logo" className="h-10"
+            width={50}
+            height={50}
+            >
+
+            </Image>
+           
             <h1 className="text-lg font-bold">Tesla Investment And Stocks</h1>
           </div>
 

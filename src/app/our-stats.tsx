@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaPlay } from "react-icons/fa";
 export function OurStats() {
   return (
@@ -30,7 +31,13 @@ export function OurStats() {
 
             <div className="divone flex gap-10">
               <div>
-              <img src="/image/setIcon3.png" alt="" />
+          <Image
+           src="/image/setIcon3.png"
+           width={50}
+           height={50}
+           alt="">
+            </Image>
+              
               </div>
             <div>
               <p className="text-blue-500 font-bold text-lg">
@@ -45,7 +52,13 @@ export function OurStats() {
 
             <div className="divtwo mt-5 flex gap-10">
             <div>
-              <img src="/image/setIcon4.png" alt="" />
+              <Image
+                src="/image/setIcon4.png" alt="" 
+                width={50}
+                height={50}
+              >
+              </Image>
+              
               </div>
 
               <div>
@@ -61,7 +74,12 @@ export function OurStats() {
 
             <div className="divtwo mt-5 flex gap-10">
             <div>
-              <img src="/image/setIcon5.png" alt="" />
+               <Image
+                 src="/image/setIcon5.png" alt="" 
+                width={50}
+                height={50}
+              >
+              </Image>
               </div>
 
               <div>

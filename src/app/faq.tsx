@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 const FAQS = [
@@ -22,14 +23,16 @@ const FAQS = [
 
 export function Faq() {
   return (
-    <section className="py-8 px-8 lg:py-20" style={{fontFamily:'Rubik'}}>
+    <section className="py-8 px-8 lg:py-20" style={{ fontFamily: "Rubik" }}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-blue-gray-800 mb-4">
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-500 mx-auto lg:w-3/5">
-            Welcome to the AI Conference 2023 FAQ section. We're here to address your most common queries and provide you with the information you need to make the most of your conference experience.
+            Welcome to the AI Conference 2023 FAQ section. We're here to address
+            your most common queries and provide you with the information you
+            need to make the most of your conference experience.
           </p>
         </div>
 
@@ -41,11 +44,14 @@ export function Faq() {
               key={key}
             >
               {/* Image with hover effect */}
-              <img
+              <Image
                 className="h-48 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                 src={img}
                 alt={title}
-              />
+                width={50}
+                height={50}
+              ></Image>
+            
               <div className="p-4">
                 {/* FAQ Title */}
                 <h2 className="text-xl font-bold mb-2">{title}</h2>
