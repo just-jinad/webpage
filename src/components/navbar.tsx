@@ -21,30 +21,32 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navbarVisible, setNavbarVisible] = useState(true);
   const [atTop, setAtTop] = useState(true);
-  let lastScrollY = window.scrollY;
+  const [lastScrollY, setLastScrollY] = useState(0); // Track the last scroll position
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setNavbarVisible(false); // Hide navbar when scrolling down
-      } else {
-        setNavbarVisible(true); // Show navbar when scrolling up
-      }
+      if (typeof window !== "undefined") {
+        if (window.scrollY > lastScrollY) {
+          setNavbarVisible(false); // Hide navbar when scrolling down
+        } else {
+          setNavbarVisible(true); // Show navbar when scrolling up
+        }
 
-      if (window.scrollY === 0) {
-        setAtTop(true);
-      } else {
-        setAtTop(false);
+        setAtTop(window.scrollY === 0);
+        setLastScrollY(window.scrollY); // Update last scroll position
       }
-
-      lastScrollY = window.scrollY;
     };
 
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <header className="absolute top-0 left-0 w-full z-50">
@@ -81,15 +83,13 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex mt-5 justify-between items-center py-6 px-4 md:px-10">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Image 
-            src="/image/logo.png" alt="Tesla Logo" className="h-10"
-            width={50}
-            height={50}
-            
-            >
-
-            </Image>
-           
+            <Image
+              src="/image/logo.png"
+              alt="Tesla Logo"
+              className="h-10"
+              width={50}
+              height={50}
+            />
             <h1 className="text-lg font-bold">Tesla Investment And Stocks</h1>
           </div>
 
@@ -124,7 +124,10 @@ const Navbar = () => {
             className="block md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} className="h-6 w-6" />
+            <FontAwesomeIcon
+              icon={menuOpen ? faTimes : faBars}
+              className="h-6 w-6"
+            />
           </button>
         </div>
 
