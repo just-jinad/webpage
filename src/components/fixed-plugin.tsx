@@ -1,13 +1,11 @@
 "use client";
 import Image from "next/image";
 
-
 export function FixedPlugin() {
   return (
     <a href="/" target="_blank">
       <button
         color="white"
-        
         className="!fixed bg-[#273272] bottom-4 text-white right-4 flex gap-1 pl-2 items-center p-2 rounded"
       >
         <Image
@@ -17,7 +15,7 @@ export function FixedPlugin() {
           alt="Material Tailwind"
           src="/image/icon.png"
         />{" "}
-        Chat with us, we're are online!  jivochat
+        Chat with us, we&apos;re online! jivochat
       </button>
     </a>
   );
