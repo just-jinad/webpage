@@ -30,9 +30,9 @@ export function Faq() {
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-500 mx-auto lg:w-3/5">
-            Welcome to the AI Conference 2023 FAQ section. We're here to address
-            your most common queries and provide you with the information you
-            need to make the most of your conference experience.
+            Welcome to the AI Conference 2023 FAQ section. We&apos;re here to
+            address your most common queries and provide you with the information
+            you need to make the most of your conference experience.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export function Faq() {
                 width={50}
                 height={50}
               ></Image>
-            
+
               <div className="p-4">
                 {/* FAQ Title */}
                 <h2 className="text-xl font-bold mb-2">{title}</h2>
