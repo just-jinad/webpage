@@ -85,6 +85,7 @@ const Navbar = () => {
             src="/image/logo.png" alt="Tesla Logo" className="h-10"
             width={50}
             height={50}
+            
             >
 
             </Image>
